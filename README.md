@@ -7,7 +7,7 @@ www.mrlamont.com
 ## About Me
 
 * GA WDI-18 (2015) Alumni
-* Entrepreneur & [Consultant](http://massivesoftware.com)
+* Entrepreneur & [Consultant](http://massivesoftware.com/gallery)
 * [Functional Programming Evangelist](https://hackernoon.com/make-the-leap-from-javascript-to-purescript-5b35b1c06fef)
 
 ## Objectives
@@ -18,7 +18,7 @@ www.mrlamont.com
 
 ## Javascript is designed on a simple object based paradigm
 
-Virtually everything in Javascript is an object, including strings, arrays, to the browser APIs built on top of JavaScript. Here's a fun fact: even functions in JavaScript are objects, which means they have properties.  You can even create your own objects to encapsulate related functions and variables, using prototypal inheritance.  We're going to learn about prototypical inheritance, but first let's review the characteristics of a JavaScript object
+Virtually everything in Javascript is an object, including strings, arrays, to the browser APIs built on top of JavaScript. Here's a fun fact: even functions in JavaScript are objects, which means they have properties.  Some exceptions are *primitive values*, such as *null*, *undefined*, and *NaN*. You can even create your own objects to encapsulate related functions and variables, using prototypal inheritance.  We're going to learn about prototypical inheritance, but first let's review the characteristics of a JavaScript object
 
 * Objects have properties
 * Objects also have a [prototype](https://www.google.com/search?q=define+prototype) object
@@ -45,7 +45,7 @@ Virtually everything in Javascript is an object, including strings, arrays, to t
 
 ### Code example explanation
 
-The function *Cat* gives us this:
+The constructor function *Cat* gives us this:
 
 ![Parent](parent.png "Parent Object")
 
@@ -53,7 +53,7 @@ The function *Cat* gives us this:
 
 ![Parent](parent-child.png "Parent & Child Objects")
 
-... and we can add a prototype function ( e.g., *meow*)
+... and we can add a prototype functions ( e.g., *meow*)
 
 ![Parent](parent-method.png "Parent Methods")
 
@@ -62,7 +62,7 @@ The function *Cat* gives us this:
 2. [ES6 Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
 
 ## What's in it for me?
-### Leverage standard built-in objects
+### Leverage methods from standard built-in objects
 1. You don't have to create all the prototype methods yourself
 2. You can add more methods if they don't exist already ⚠️
 3. You can even modify existing prototype methods if they don't match what you want ⚠️
@@ -70,14 +70,14 @@ The function *Cat* gives us this:
 ### Prototypal inheritance is a core tenant of Object Oriented Programming
 1. Create your own objects that inherit properties and methods from other objects
 2. Code reuse and recycling
-3. [Encapsulation](https://www.cs.drexel.edu/~introcs/Fa15/notes/06.1_OOP/Advantages.html?CurrentSlide=3)*
+3. [Encapsulation](https://www.cs.drexel.edu/~introcs/Fa15/notes/06.1_OOP/Advantages.html?CurrentSlide=3) [1]
 
 ## What things should I avoid?
 1. Long prototype chains will impact performance
 2. Monkey patching (i.e., modifying native prototypes)
 
 ## Further Reading
-[Code examples](https://github.com/adkelley/prototypal-inheritance)
+[My code examples](https://github.com/adkelley/ga-lecture/blob/master/index-FINISHED.html)
 
 [Prototypal Inheritance in JavaScript - Kevin Ennis](https://medium.com/@kevincennis/prototypal-inheritance-781bccc97edb)
 
@@ -85,4 +85,4 @@ The function *Cat* gives us this:
 
 [Inheritance and the prototype chain - MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
 
-[Four ways to deal with private members in JavaScript](https://eclipsesource.com/blogs/2013/07/05/private-members-in-javascript/)
+[1] [Four ways to deal with private members in JavaScript - Tim Buschtöns ](https://eclipsesource.com/blogs/2013/07/05/private-members-in-javascript/)

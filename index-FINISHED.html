@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prototypal Inheritance</title>
+</head>
+<body>
+  <h1>Prototypal Inheritance</h1>
+<script>
+function Dog(name, breed) {
+  this.name = name;
+  this.breed = breed;
+}
+
+Dog.prototype.bark = function() {
+  console.log(`Bark, Bark! My name is ${this.name}`);
+}
+
+const puppy = new Dog('fido', 'french bulldog');
+
+// ES6 Classes - basics
+class Cat {
+  constructor (name, breed) {
+    this.name = name;
+    this.breed = breed;
+  }
+  meow() {
+    console.log(`Meow, Meow! My name is ${this.name}`);
+  }
+  cuddle() {
+    console.log(`I love my owner`);
+  }
+}
+
+const kitten1 = new Cat('maple', 'somali');
+const kitten2 = new Cat('snickers', 'siamese');
+
+</script>
+
+  </body>
+</html>

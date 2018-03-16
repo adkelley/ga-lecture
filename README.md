@@ -1,30 +1,22 @@
-# Prototypal Inheritance
+# Prototypal Inheritance in JavaScript
 
 ![inheritance](inheritance.gif "www.mrlamont.com")
 
 www.mrlamont.com
 
-## About Me
-
-* GA WDI-18 (2015) Alumni
-* Entrepreneur & [Consultant](http://massivesoftware.com/gallery)
-* [Functional Programming Evangelist](https://hackernoon.com/make-the-leap-from-javascript-to-purescript-5b35b1c06fef)
-
 ## Objectives
 
-* Demonstrate a use case that explains prototypal inheritance
-* Demonstrate what kind of flexibility prototypal inheritance gives programmers
+1. Show how objects in JavaScript can be extended using [prototypal](https://www.google.com/search?q=define+prototype) inheritance
+2. Demonstrate the flexibility that prototypal inheritance gives programmers
 
 
 ## Javascript is designed on a simple object based paradigm
 
-Virtually everything in Javascript is an object, including strings, arrays, to the browser APIs built on top of JavaScript. Here's a fun fact: even functions in JavaScript are objects, which means they have properties.  Some exceptions are *primitive values*, such as *null*, *undefined*, and *NaN*. You can even create your own objects to encapsulate related functions and variables, using prototypal inheritance.  We're going to learn about prototypical inheritance, but first let's review the characteristics of a JavaScript object
+Virtually everything in Javascript is an object, including strings, arrays, and even functions! Some exceptions are *primitive values*, such as *null*, *undefined*, and *NaN*. You can even create your own objects to encapsulate related functions and variables, using prototypal inheritance.  
 
-* Objects have properties
-* Objects also have a [prototype](https://www.google.com/search?q=define+prototype) object
-* JavaScript has a wealth of [Standard built-in objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects) (SBO) with methods and properties
+For instance, let's say we have a *user* object with its properties and methods, and want to make *admin* and *guest* as slightly modified variants of it. We’d like to reuse what we have in *user*, not copy/reimplement its methods, just build a new object on top of it. We do this by leveraging JavaScript's prototypal inheritance.
 
-## Objects inherit properties and methods from other objects
+## Objects can inherit properties and methods from other objects
 
 ### Array Example:
 
@@ -34,36 +26,34 @@ Virtually everything in Javascript is an object, including strings, arrays, to t
   * join()
   * pop()
   * ...
-* Array.prototype property for creating additional properties and methods
+* Use the Array.prototype function to create additional methods
 
-## We can create our own objects and inherit from them
+![Array](Array.png "Array prototype")
 
-### Here's one approach:
-1. Make a *Parent* function that "constructs" our object properties
-2. Call the *Parent* constructor function with to *new* to create *children*
-3. Use the *prototype* function to create methods for the *Parent* function that our children inherit
+## Create you own prototype objects using Classes (ES6):
+[Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
 
 ### Code example explanation
 
-The constructor function *Cat* gives us this:
+Our class function *Cat* gives us this:
 
-![Parent](parent.png "Parent Object")
+![Cat](Cat.png "Parent Object")
 
-... which you assign to your kittens using the *new* keyword
+... which you assign to your kittens using the *new* keyword and individual properties
 
-![Parent](parent-child.png "Parent & Child Objects")
+![Parent](kitten.png "Parent & Child Objects")
 
-... and we can add a prototype functions ( e.g., *meow*)
+... and we can add our prototype functions ( e.g., *meow*)
 
-![Parent](parent-method.png "Parent Methods")
+![Parent](Cat-methods.png "Parent Methods")
 
 ### More ways to create inheritance:
 1. [Object.create()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create)
-2. [ES6 Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
+2. [Object Constructors](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor)
 
 ## What's in it for me?
-### Leverage methods from standard built-in objects
-1. You don't have to create all the prototype methods yourself
+### Leverage properties & methods from standard built-in objects (e.g., Array)
+1. You don't have to create all the prototype properties & methods yourself
 2. You can add more methods if they don't exist already ⚠️
 3. You can even modify existing prototype methods if they don't match what you want ⚠️
 

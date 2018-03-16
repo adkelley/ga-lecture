@@ -7,6 +7,8 @@
 <body>
   <h1>Prototypal Inheritance</h1>
 <script>
+
+// Constructor functions (pre-ES6)
 function Dog(name, breed) {
   this.name = name;
   this.breed = breed;
@@ -28,13 +30,14 @@ class Cat {
   meow() {
     console.log(`Meow, Meow! My name is ${this.name}`);
   }
-  
+
   cuddle() {
     console.log(`I love my owner`);
   }
 }
 
 const kitten1 = new Cat('maple', 'somali');
+kitten1.color = 'ruddy';
 const kitten2 = new Cat('snickers', 'siamese');
 
 </script>
